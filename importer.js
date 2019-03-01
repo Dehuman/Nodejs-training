@@ -1,8 +1,8 @@
-import fs from 'fs';
+import {readFile, readFileSync} from 'fs';
 import {promisify} from 'util';
 import csv from 'csvtojson';
 
-const readFile = promisify(fs.readFile);
+const readFilePromise = promisify(readFile);
 
 class Importer {
     constructor(watcherEmitter, callback) {
@@ -18,12 +18,12 @@ class Importer {
     }
 
     import(file) {
-        return readFile(file, 'utf8');
+        return readFilePromise(file, 'utf8');
     }
 
     importSync(file) {
         try {
-            return fs.readFileSync(file, 'utf8');
+            return readFileSync(file, 'utf8');
         } catch (error) {
             console.error(error);
             return null;
