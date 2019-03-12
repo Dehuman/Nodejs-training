@@ -1,6 +1,8 @@
 class Product {
-    constructor() {
-        console.log("Product module");
+    constructor(id, name, reviews) {
+        this.id = id;
+        this.name = name;
+        this.reviews = reviews;
     }
 }
 

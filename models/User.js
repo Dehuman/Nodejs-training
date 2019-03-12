@@ -1,6 +1,7 @@
 class User {
-    constructor() {
-        console.log("User module");
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
     }
 }
 
