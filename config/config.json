@@ -1,3 +1,23 @@
 {
-  "name": "Node.js Homework Application"
+  "development": {
+    "username": "node",
+    "password": "node",
+    "database": "node",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "node",
+    "password": "node",
+    "database": "node",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "node",
+    "password": "node",
+    "database": "node",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
 }
